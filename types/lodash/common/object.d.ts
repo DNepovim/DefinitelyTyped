@@ -582,6 +582,10 @@ declare module "../index" {
         /**
          * @see _.entries
          */
+        entries<K, T>(object?: Dictionary<T, K>): Array<[K, T]>;
+        /**
+         * @see _.entries
+         */
         entries(object?: object): Array<[string, any]>;
     }
     interface Object<T> {
@@ -2210,6 +2214,10 @@ declare module "../index" {
          */
         toPairs<T>(object?: Dictionary<T> | NumericDictionary<T>): Array<[string, T]>;
         /**
+         * @see _.toPairs
+         */
+        toPairs<K, T>(object?: Dictionary<T, K>): Array<[K, T]>;
+         /**
          * @see _.toPairs
          */
         toPairs(object?: object): Array<[string, any]>;
