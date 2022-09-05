@@ -244,8 +244,8 @@ declare module "../index" {
     type PropertyPath = Many<PropertyName>;
     /** Common interface between Arrays and jQuery objects */
     type List<T> = ArrayLike<T>;
-    interface Dictionary<T> {
-        [index: string]: T;
+    interface Dictionary<T, K = string> {
+        [K]: T;
     }
     interface NumericDictionary<T> {
         [index: number]: T;
